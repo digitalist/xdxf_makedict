@@ -68,7 +68,7 @@ Logger::Logger(gint level)
 	g_log_set_default_handler(log, this);
 }
 
-void g_info(const gchar *fmt, ...)
+/*void g_info(const gchar *fmt, ...)
 {
 	va_list va;
 
@@ -76,3 +76,4 @@ void g_info(const gchar *fmt, ...)
 	g_logv(G_LOG_DOMAIN, G_LOG_LEVEL_INFO, fmt, va);
 	va_end(va);
 }
+*/

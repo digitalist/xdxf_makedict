@@ -19,6 +19,6 @@ private:
 			gpointer user_data);
 };
 
-extern void g_info(const gchar *fmt, ...);
+//extern void g_info(const gchar *fmt, ...);
 
 #endif//!_LOG_HPP_
