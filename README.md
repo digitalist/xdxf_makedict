@@ -1,4 +1,4 @@
-## XDXF format
+## XDXF format [gcc 5.1 compatible]
 XDXF stands for XML Dictionary Exchange Format, and specifies a **semantic** format for storing dictionaries.
 
 The format is **open and free** to use for everyone. Anyone interested in its further development are welcome in XDXF [Google group](https://github.com/soshial/xdxf_makedict/groups.google.com/group/xdxf-format) or [XDXF project on github](https://github.com/soshial/xdxf_makedict/).
