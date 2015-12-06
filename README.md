@@ -22,5 +22,5 @@ makedict helps you convert dictionary files just by such simple interface:
 `makedict -o xdxf path/to/file.index`  
 * to convert from dsl to stardict format  
 `makedict -o stardict path/to/dictionary.dsl`  
-* to fix dictd tags issue make an alias for dict command, ie:
-`dict  word | sed 's|</b>|-|g' | sed 's|<[^>]*>||g'` "[StackOverflow answer](http://stackoverflow.com/questions/12719128/remove-replace-html-tags-in-bash/12719155#12719155)"
+* to fix dictd tags issue make an alias for dict command, ie: "[StackOverflow answer](http://stackoverflow.com/questions/12719128/remove-replace-html-tags-in-bash/12719155#12719155)":
+`dict  word | sed 's|</b>|-|g' | sed 's|<[^>]*>||g'`
