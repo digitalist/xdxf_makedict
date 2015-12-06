@@ -1,5 +1,5 @@
 PROJECT(makedict)
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 # Older versions have a different signature for CMAKE_MINIMUM_REQUIRED,
 # check it manually just to make sure
 IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} LESS 2.6)
