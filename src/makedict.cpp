@@ -491,7 +491,7 @@ int MakeDict::convert(const char *arg)
 			return EXIT_FAILURE;
 		}
 	} else if (ocodec) {
-		std::unique_ptr<ParserBase> parser(create_parser(arg));
+		XDXF_UNIQ_POINTER<ParserBase> parser(create_parser(arg));
 		g_assert(parser.get());
 		std::string output_cmd = std::string("'") + ocodec +
 			"' --work-dir '" + cur_workdir + "'" + generator_options_str();
@@ -525,7 +525,7 @@ int MakeDict::convert(const char *arg)
 					   Process::OPEN_PIPE_FOR_READ |
 					   Process::INHERIT_STDIN))
 			return EXIT_FAILURE;
-		std::unique_ptr<GeneratorBase> generator(
+		XDXF_UNIQ_POINTER<GeneratorBase> generator(
 			GeneratorsRepo::get_instance().create_codec(output_format_));
 		g_assert(generator.get());
 		GeneratorDictPipeOps gen_dict_ops(input_codec.output(), *generator);
@@ -545,9 +545,9 @@ int MakeDict::convert(const char *arg)
 			return EXIT_FAILURE;
 		}
 	} else {
-		std::unique_ptr<ParserBase> parser(create_parser(arg));
+		XDXF_UNIQ_POINTER<ParserBase> parser(create_parser(arg));
 		g_assert(parser.get());
-		std::unique_ptr<GeneratorBase> generator(
+		XDXF_UNIQ_POINTER<GeneratorBase> generator(
 			GeneratorsRepo::get_instance().create_codec(output_format_));
 		g_assert(generator.get());
 		Connector connector(*generator, cur_workdir);

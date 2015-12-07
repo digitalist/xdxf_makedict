@@ -102,10 +102,10 @@ public:
 			dict_ops_ = std_dict_ops_.get();
 	}
 protected:
-	std::unique_ptr<IParserDictOps> std_dict_ops_;
+	XDXF_UNIQ_POINTER<IParserDictOps> std_dict_ops_;
 	IParserDictOps *dict_ops_;
 	StringMap parser_options_;
-	std::unique_ptr<Logger> logger_;
+	XDXF_UNIQ_POINTER<Logger> logger_;
 
 	virtual int parse(const std::string& url);
 

@@ -14,6 +14,10 @@
 #else
 #  define ATTRIBUTE_WARN_UNUSED_RESULT /**/
 #endif
-
+#if __cplusplus > 199711L
+#define XDXF_UNIQ_POINTER std::unique_ptr
+#else
+#define XDXF_UNIQ_POINTER std::auto_ptr
+#endif
 #endif//!_MAKEDICT_COMPILER_HPP_
 

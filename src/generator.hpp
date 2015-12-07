@@ -156,9 +156,9 @@ private:
 	std::string format_;
 	std::string version_;
 	bool enc_key_;
-	std::unique_ptr<IGeneratorDictOps> std_dict_ops_;
+	XDXF_UNIQ_POINTER<IGeneratorDictOps> std_dict_ops_;
 	IGeneratorDictOps *dict_ops_;
-	std::unique_ptr<Logger> logger_;
+	XDXF_UNIQ_POINTER<Logger> logger_;
 };
 
 class GeneratorsRepo : public CodecsRepo<GeneratorBase, GeneratorsRepo> {};
