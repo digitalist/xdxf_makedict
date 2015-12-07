@@ -1,4 +1,4 @@
-## XDXF format [gcc 5.1 compatible]
+## XDXF format [c++98/c++11 compatible, see CMakeLists.txt]
 XDXF stands for XML Dictionary Exchange Format, and specifies a **semantic** format for storing dictionaries.
 
 The format is **open and free** to use for everyone. Anyone interested in its further development are welcome in XDXF [Google group](https://groups.google.com/forum/#!forum/xdxf-format) or [XDXF project on github](https://github.com/soshial/xdxf_makedict/).
@@ -10,7 +10,7 @@ Moreover, the format has many tags that are specific to dictionaries: etymologie
 For more information on advantages of the format, consider reading the article "[Why XDXF is better?](https://github.com/soshial/xdxf_makedict/wiki/Why-is-XDXF-better%3F)". 
 
 For opponents of using XML for storing dictionary and the problem of storing and parsing big XML-files in RAM, XDXF schema and structure of any dictionary allow to store all word articles on disk with help of hash-tables/. Some dictionary software applies this approach quite efficiently (for example, see [GoldenDict](http://goldendict.org/)).
-Although, there is no software that allows editing dictionaries at the moment, XDXF is a mor eor less human-readible XML, that is quite easy to edit manually in a text editor even without prior knowledge of the format specifications.
+Although, there is no software that allows editing dictionaries at the moment, XDXF is a more or less human-readible XML, that is quite easy to edit manually in a text editor even without prior knowledge of the format specifications.
 
 ## makedict converter
 This package is for converting dictionary files many-to-many: `dictd/dsl/sdict/stardict/xdxf → dictd/stardict/xdxf`. The principal format for dictionary is XDXF though, for aforementioned reasons.
